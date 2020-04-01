@@ -1,27 +1,50 @@
 import Fields from 'katejs/lib/fields';
 
-const Task = {
+const Project = {
   fields: [
     {
       name: 'title',
       type: Fields.STRING,
     },
   ],
+};
+
+const Task = {
+  fields: [
+    {
+      name: 'title',
+      type: Fields.STRING,
+    },
+    {
+      name: 'project',
+      type: Fields.REFERENCE,
+      entity: 'Project',
+    },
+  ],
   tables: [
     {
-      name: 'users',
+      name: 'worklog',
       fields: [
         {
           name: 'title',
           type: Fields.STRING,
+        },
+        {
+          name: 'started',
+          type: Fields.DATE,
+        },
+        {
+          name: 'ended',
+          type: Fields.DATE,
         },
       ],
     },
   ],
 };
 
-export const title = 'Boilerplate app';
-export const packageName = 'boilerplate_app';
+export const title = 'TiCo';
+export const packageName = 'tico_app';
 export const structures = {
+  Project,
   Task,
 };

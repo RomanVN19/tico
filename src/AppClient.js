@@ -1,6 +1,6 @@
 import { use } from 'katejs/lib/client';
 
-import TestForm from 'forms/TestForm';
+import ControlPanel from 'forms/ControlPanel';
 
 import { structures, title, packageName } from './structure';
 import env from './front.env.json';
@@ -16,12 +16,12 @@ const AppClient = parent => class Client extends use(parent) {
 
     this.forms = {
       ...this.forms,
-      TestForm,
+      ControlPanel,
     };
 
-    this.menu.push({
-      form: 'TestForm',
-      title: 'Test form',
+    this.menu.unshift({
+      form: 'ControlPanel',
+      title: 'Control panel',
     });
     // this.forms contains:
     //   TaskList,

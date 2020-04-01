@@ -1,6 +1,9 @@
 import { Elements, Form } from 'katejs/lib/client';
+/*
+  Функции
 
-export default class TestForm extends Form {
+ */
+export default class ControlPanel extends Form {
   constructor(args) {
     super(args);
     this.elements = [
